@@ -1,12 +1,12 @@
 {
     "icons": [
       {
-        "src": "heart.png",
+        "src": "alya.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
-        "src": "heart.png",
+        "src": "alya.png",
         "sizes": "512x512",
         "type": "image/png"
       }
