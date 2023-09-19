@@ -1,12 +1,12 @@
 {
     "icons": [
       {
-        "src": "orca.png",
+        "src": "heart.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
-        "src": "orca.png",
+        "src": "heart.png",
         "sizes": "512x512",
         "type": "image/png"
       }
