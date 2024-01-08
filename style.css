@@ -45,8 +45,8 @@ body {
 
 .container p {
     font-size: 6px;
-    font-weight: 400;
-    color: white;
+    font-weight: 100;
+    color: purple;
     max-width: 100px;
     text-align: center;
     background-color:rgb(211, 34, 34);
@@ -58,7 +58,7 @@ body {
     padding: 3px;
     background-color:rgb(211, 34, 34);
     border-radius: 9px;
-    
+    font-weight: 500;
 }
 
 .time-content div {
@@ -75,7 +75,7 @@ body {
 .time-content span {
     color: white;
    padding: 7px;
-   font-weight: bolder;
+   font-weight: 500;
 } 
 
 head {
