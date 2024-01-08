@@ -35,22 +35,29 @@ body {
 
 .container header {
     font-size: 80;
-    color: purple;
+    color: white;
     text-align: center;
-    font-weight: bolder;
+    font-weight: bold;
+    background-color:rgb(211, 34, 34);
+    padding: 5px;
+    border-radius: 9px;
 }
 
 .container p {
     font-size: 16px;
     font-weight: 400;
-    color: purple;
+    color: white;
     max-width: 550px;
     text-align: center;
+    background-color:rgb(211, 34, 34);
+    border-radius: 9px;
 }
 
 .time-content {
     display: flex;
     padding: 3px;
+    background-color:rgb(211, 34, 34);
+    border-radius: 9px;
 }
 
 .time-content div {
@@ -65,7 +72,7 @@ body {
 }
 
 .time-content span {
-    color: purple;
+    color: white;
    padding: 30px;
    font-weight: bolder;
 } 
