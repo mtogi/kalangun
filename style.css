@@ -44,10 +44,10 @@ body {
 }
 
 .container p {
-    font-size: 16px;
+    font-size: 6px;
     font-weight: 400;
     color: white;
-    max-width: 550px;
+    max-width: 100px;
     text-align: center;
     background-color:rgb(211, 34, 34);
     border-radius: 9px;
@@ -58,6 +58,7 @@ body {
     padding: 3px;
     background-color:rgb(211, 34, 34);
     border-radius: 9px;
+    
 }
 
 .time-content div {
@@ -68,12 +69,12 @@ body {
 {
     font-size: 30px;
     margin-bottom: -14px;
-    padding: 8px;
+    padding: 7px;
 }
 
 .time-content span {
     color: white;
-   padding: 10px;
+   padding: 7px;
    font-weight: bolder;
 } 
 
