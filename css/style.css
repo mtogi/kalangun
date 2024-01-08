@@ -34,16 +34,16 @@ body {
 }
 
 .container header {
-    font-size: 20;
-    color: #fff;
-    font-weight: 600;
+    font-size: 80;
+    color: purple;
     text-align: center;
+    font-weight: bolder;
 }
 
 .container p {
     font-size: 16px;
     font-weight: 400;
-    color: #fff;
+    color: purple;
     max-width: 550px;
     text-align: center;
 }
@@ -65,8 +65,9 @@ body {
 }
 
 .time-content span {
-    color: #fff;
+    color: purple;
    padding: 30px;
+   font-weight: bolder;
 } 
 
 head {
