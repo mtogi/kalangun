@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: rgb(227,225,213)
 
 }
 
@@ -78,5 +78,6 @@ body {
 } 
 
 head {
-    background-color: whitesmoke;
+    background-color: rgb(227,225,213)
+    ;
 }
