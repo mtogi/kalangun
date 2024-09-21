@@ -3,43 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sevgilime Kalan</title>
-
-<link rel="icon" href="orca.png" type="image/png">
-<link rel="stylesheet" href="css/style.css">
-<link rel="manifest" href="manifest.json">
-
+    <title>Countdown to Love</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #FF9A8B, #FF6A88, #FF99AC);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        #countdown {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .heart {
+            font-size: 5em;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .sparkle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #fff;
+            opacity: 0;
+            animation: twinkle 1.5s infinite;
+        }
+        @keyframes twinkle {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(0); opacity: 0; }
+        }
+    </style>
 </head>
 <body>
-    <section class="container">
-        <img src="ceylan1.jpg" alt="" class="image">
-        <!-- <header>Eğer sonunda kavuşmak yoksa, uzaktan sevmeler yorar insanı.  </header> -->
-    
-        <div class="time-content">
-            <div>
-                <p id="days">00</p>
-                <span>Gün</span>
-            </div>
-            <div>
-                <p id="hours">00</p>
-                <span>Saat</span>
-            </div>
-            <div>
-                <p id="minutes">00</p>
-                <span>Dakika</span>
-            </div>
-            <div>
-                <p id="seconds">00</p>
-                <span>Saniye</span>
-            </div>
+    <div class="container">
+        <h1>Countdown to Love</h1>
+        <div id="countdown"></div>
+        <p>Until I see my loved one!</p>
+        <div class="heart">❤️</div>
+    </div>
 
-        </div>
+    <script>
+        // Countdown function
+        function updateCountdown() {
+            const targetDate = new Date("December 13, 2024 00:00:00").getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
 
-        
-    </section>
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-    <footer style="background-color: rgb(227,225,213);"></footer>
+            document.getElementById("countdown").innerHTML = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+        }
 
-    <script src="js\script.js"></script>
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+
+        // Create sparkles
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = Math.random() * window.innerWidth + 'px';
+            sparkle.style.top = Math.random() * window.innerHeight + 'px';
+            sparkle.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(sparkle);
+
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1500);
+        }
+
+        // Create sparkles periodically
+        setInterval(createSparkle, 300);
+    </script>
 </body>
 </html>
