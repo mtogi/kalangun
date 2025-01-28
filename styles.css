@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffd1dc, #ffe6ea);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    position: relative;
+}
+
+.forest-scene {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: -150px;
+    left: 0;
+    z-index: 1;
+}
+
+.deer {
+    position: relative;
+    width: 120px;
+    height: 160px;
+    margin: 20px auto;
+}
+
+.deer .face {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    background: #8B4513;
+    border-radius: 35px 35px 25px 25px;
+    top: 40px;
+    left: 30px;
+}
+
+.deer .snout {
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    background: #A0522D;
+    border-radius: 15px;
+    bottom: -10px;
+    left: 15px;
+}
+
+.deer .eye {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #000;
+    border-radius: 50%;
+    top: 30px;
+}
+
+.deer .eye.left {
+    left: 12px;
+}
+
+.deer .eye.right {
+    right: 12px;
+}
+
+.deer .antler {
+    position: absolute;
+    width: 30px;
+    height: 45px;
+    border: 6px solid #8B4513;
+    border-bottom: none;
+    border-radius: 50% 50% 0 0;
+    top: -20px;
+}
+
+.deer .antler.left {
+    left: 15px;
+    transform: rotate(-15deg);
+}
+
+.deer .antler.right {
+    right: 15px;
+    transform: rotate(15deg);
+}
+
+.bunny {
+    position: relative;
+    width: 80px;
+    height: 100px;
+    margin: 20px;
+}
+
+.bunny .body {
+    position: absolute;
+    width: 60px;
+    height: 70px;
+    background: #FFF5F5;
+    border-radius: 50% 50% 45% 45%;
+    bottom: 0;
+    left: 10px;
+    box-shadow: inset -5px -5px 10px rgba(0,0,0,0.1);
+}
+
+.bunny .head {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background: #FFF5F5;
+    border-radius: 50%;
+    top: 15px;
+    left: 17px;
+    box-shadow: inset -3px -3px 8px rgba(0,0,0,0.1);
+}
+
+.bunny .ear {
+    position: absolute;
+    width: 15px;
+    height: 45px;
+    background: #FFF5F5;
+    border-radius: 40% 40% 20% 20%;
+    top: -25px;
+}
+
+.bunny .ear:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 35px;
+    background: #FFE4E8;
+    border-radius: 40% 40% 20% 20%;
+    top: 5px;
+    left: 2.5px;
+}
+
+.bunny .ear.left {
+    left: 12px;
+    transform: rotate(-5deg);
+}
+
+.bunny .ear.right {
+    right: 12px;
+    transform: rotate(5deg);
+}
+
+.bunny .eye {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+    top: 25px;
+}
+
+.bunny .eye.left {
+    left: 12px;
+}
+
+.bunny .eye.right {
+    right: 12px;
+}
+
+.bunny .nose {
+    position: absolute;
+    width: 8px;
+    height: 6px;
+    background: #FFB7C5;
+    border-radius: 50%;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    color: #ff6b95;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.countdown-box {
+    background: #ff6b95;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    min-width: 100px;
+    box-shadow: 0 5px 15px rgba(255, 107, 149, 0.3);
+}
+
+.countdown-box span {
+    font-size: 2em;
+    font-weight: bold;
+    display: block;
+}
+
+.countdown-box label {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.hearts {
+    margin-top: 30px;
+}
+
+.hearts span {
+    font-size: 2em;
+    margin: 0 5px;
+    animation: heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes hop {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes sway {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(3deg); }
+}
+
+.bunny {
+    animation: hop 2s infinite ease-in-out;
+}
+
+.deer {
+    animation: sway 4s infinite ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .content-box {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .countdown-box {
+        min-width: 80px;
+        padding: 10px;
+    }
+    
+    .countdown-box span {
+        font-size: 1.5em;
+    }
+    
+    .forest-scene {
+        height: 200px;
+        top: -100px;
+    }
+    
+    .deer {
+        transform: scale(0.7);
+    }
+    
+    .bunny {
+        transform: scale(0.6);
+    }
+}
+
+/* Grass and flowers */
+.forest-scene::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: 
+        radial-gradient(circle at 20% 80%, #ff69b4 2px, transparent 4px),
+        radial-gradient(circle at 40% 80%, #ff1493 2px, transparent 4px),
+        radial-gradient(circle at 60% 80%, #ff69b4 2px, transparent 4px),
+        radial-gradient(circle at 80% 80%, #ff1493 2px, transparent 4px),
+        linear-gradient(to bottom, transparent 0%, #90EE90 100%);
+    z-index: -1;
+}
